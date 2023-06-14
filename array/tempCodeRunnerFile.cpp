@@ -1,3 +1,4 @@
- // for(int i = k;i<=n;i++){
-    //     arr[0] =arr[i];
-    // }
+ while(arr[i]<1){
+        i++;
+    }
+    cout<<i;

@@ -1,4 +1,5 @@
 #include <bits/stdc++.h> 
+using namespace std;
 bool isPossible(int *arr, int n)
 {
       int count = 0;
@@ -13,6 +14,17 @@ bool isPossible(int *arr, int n)
         }
     }
     return true;                            //* if count stays 1 it will eventually loop through all element and also modify one of the element in the array and after for loop it will return true.
+}
+
+int main(){
+    int arr[] = {8,4,6};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    cout<< isPossible(arr,n);
+    return 0;
+
+
+
+
 }
 
 
