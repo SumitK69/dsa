@@ -1,22 +1,37 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int makeBeautiful(string str) {
-    int n = str.length();
-    int optcount= 0;
-    for(int i = 1; i < n; i++){
-        if(str[i-1]==str[i]){
-            str[i] = str[i-2];
-            optcount++;
-        }
+int beautifulString(string str){
+  int op1 = 0, op2 = 0;
+  int n = str.length();
+  for(int i = 0;i<n;i++){
+    if(i%2 == 0){
+      if(str[i]!= '0')
+        op1++;
     }
-    for(int i = 0; i < n; i++){
-        cout<<str[i]<<" ";
+    if(i%2 != 0){
+      if(str[i] != '1')
+        op1++;
     }
-    cout<<"optcount:"<<optcount;
+  }
+  for(int i = 0;i<n;i++){
+    if(i%2 == 0){
+      if(str[i]!= '1')
+        op2++;
+    }
+    if(i%2 != 0){
+      if(str[i] != '0')
+        op2++;
+    }
+  }
+  if(op2<op1)
+    return op2;
+  else
+    return op1;
 }
 
 int main(){
-    makeBeautiful("01010010101");
-    return 0;
+  string str = "1101";
+  cout<<beautifulString(str);
+  return 0;
 }
