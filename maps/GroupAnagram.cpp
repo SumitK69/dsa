@@ -22,7 +22,7 @@ vector<vector<string>> getGroupedAnagrams(vector<string> &inputStr, int n)
    
        
         for (int i = 0; i < size; i++)
-        cout << temp_vec[i] << " ";
+            cout << temp_vec[i] << " ";
            
         cout << "\n";
     }
